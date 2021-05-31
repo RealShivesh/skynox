@@ -4,8 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+
+    <!-- Slideshow gallery -->
+
+    <div class="container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="./depositphotos_252376854-stock-photo-interior-modern-white-living-room.jpg" style="width:100%" alt=" ">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="./house-interior-sofa-couch-royalty-free-thumbnail.jpg" style="width:100%" alt="second img">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="img_mountains_wide.jpg" style="width:100%" alt="third img">
+        </div>
+          
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="img_lights_wide.jpg" style="width:100%" alt="fourth img">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="img_nature_wide.jpg" style="width:100%" alt="fifth img">
+        </div>
+    
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="./depositphotos_252376854-stock-photo-interior-modern-white-living-room.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="./house-interior-sofa-couch-royalty-free-thumbnail.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="./phillip-goldsberry-fZuleEfeA1Q-unsplash.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="./sofa-1233675.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+        </div> 
+    </div>
+
+    <!-- Right side (text part) -->
+    <div>
     <h1>Upholstered Sofa</h1>
     <h3>Kyara Upholstered Standard Bed by Zipcode Design</h3>
     <div class="conten">Anchor your living room in sophisticated style and impeccable comfort with a single addition. Perfectly balancing wood accents with fabric upholstery.</div>
@@ -19,5 +73,52 @@
     <em>Clock icon</em>Dispatched in 7 working days
     <button>ADD TO CART</button>
     <button>ADD TO WISHLIST</button>
+</div>
+
+    <!-- Footer part -->
+
+    <footer>
+        <div>Secure payment
+            Don't worry, your money is in secure places.
+        </div>
+        <div>Fast & free delivery
+            Home delivery $15 For free delivery order over $250
+        </div>
+        <div>Return policy
+            No hassle return policy
+        </div>
+    </footer>
 </body>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
 </html>
