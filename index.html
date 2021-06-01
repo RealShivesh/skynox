@@ -5,89 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
-
+<div class="grid">
     <!-- Slideshow gallery -->
+    <section class="slideshow">
+        <div class="container">
 
-    <div class="container">
-        <div class="mySlides">
-          <div class="numbertext">1 / 6</div>
-          <img src="./depositphotos_252376854-stock-photo-interior-modern-white-living-room.jpg" style="width:100%" alt=" ">
-        </div>
-      
-        <div class="mySlides">
-          <div class="numbertext">2 / 6</div>
-          <img src="./house-interior-sofa-couch-royalty-free-thumbnail.jpg" style="width:100%" alt="second img">
-        </div>
-      
-        <div class="mySlides">
-          <div class="numbertext">3 / 6</div>
-          <img src="img_mountains_wide.jpg" style="width:100%" alt="third img">
-        </div>
-          
-        <div class="mySlides">
-          <div class="numbertext">4 / 6</div>
-          <img src="img_lights_wide.jpg" style="width:100%" alt="fourth img">
-        </div>
-      
-        <div class="mySlides">
-          <div class="numbertext">5 / 6</div>
-          <img src="img_nature_wide.jpg" style="width:100%" alt="fifth img">
-        </div>
-    
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-    </div>
+            <div class="mySlides">
+            <img src="./angelo-pantazis-N4wUsqIbMAM-unsplash.jpg"  alt=" ">
+            </div>
+        
+            <div class="mySlides">
+            <img src="./image2.jpg"  alt="second img">
+            </div>
+        
+            <div class="mySlides">
+            <img src="./phillip-goldsberry-fZuleEfeA1Q-unsplash.jpg"  alt="third img">
+            </div>
+            
+            <div class="mySlides">
+            <img src="./sofa-1233675.jpg"  alt="fourth img">
+            </div>
+        
+            <div class="mySlides">
+            <img src="./sven-brandsma-GZ5cKOgeIB0-unsplash.jpg"  alt="fifth img">
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
 
-    <div class="row">
-        <div class="column">
-            <img class="demo cursor" src="./depositphotos_252376854-stock-photo-interior-modern-white-living-room.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
         </div>
-        <div class="column">
-            <img class="demo cursor" src="./house-interior-sofa-couch-royalty-free-thumbnail.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+
+        <div class="row">
+
+            <div class="column">
+                <img class="thumbnail" src="./angelo-pantazis-N4wUsqIbMAM-unsplash.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+            
+            <div class="column">
+                <img class="thumbnail" src="./image2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+            </div>
+            
+            <div class="column">
+                <img class="thumbnail" src="./phillip-goldsberry-fZuleEfeA1Q-unsplash.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+            </div>
+            
+            <div class="column">
+                <img class="thumbnail" src="./sofa-1233675.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+            </div>
+            
+            <div class="column">
+                <img class="thumbnail" src="./sven-brandsma-GZ5cKOgeIB0-unsplash.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+            </div>
+
         </div>
-        <div class="column">
-            <img class="demo cursor" src="./phillip-goldsberry-fZuleEfeA1Q-unsplash.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="./sofa-1233675.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-        </div> 
-    </div>
+    </section>
 
     <!-- Right side (text part) -->
-    <div>
-    <h1>Upholstered Sofa</h1>
-    <h3>Kyara Upholstered Standard Bed by Zipcode Design</h3>
-    <div class="conten">Anchor your living room in sophisticated style and impeccable comfort with a single addition. Perfectly balancing wood accents with fabric upholstery.</div>
+    <aside>
+        
+        <div class="heading">Upholstered Sofa</div>
+        <div class="subheading">Kyara Upholstered Standard Bed by Zipcode Design</div>
+        <div class="content">Anchor your living room in sophisticated style and impeccable comfort with a single addition. Perfectly balancing wood accents with fabric upholstery.</div>
 
-    <span style="color:green">(5.0)</span> review based on 250
+        <div class="star"><span class="fa fa-star" style="color: green"></span>
+        <span class="fa fa-star" style="color: green"></span>
+        <span class="fa fa-star" style="color: green"></span>
+        <span class="fa fa-star" style="color: green"></span>
+        <span class="fa fa-star" style="color: green"></span>
+    </div>
 
-    Submit review
+        <span style="color:green">(5.0)</span> review based on 250
 
-    $567
+        <u>Submit Review</u>
 
-    <em>Clock icon</em>Dispatched in 7 working days
-    <button>ADD TO CART</button>
-    <button>ADD TO WISHLIST</button>
+        <div class="price">$567</div>
+
+        <img src="./schedule.svg" alt=""> Dispatched in 7 working days
+        <div class="button">
+            <button class="cart">ADD TO CART</button>
+        
+            <button class="wishlist">ADD TO WISHLIST</button>
+
+        </div>
+        
+    
+    </aside>
+
 </div>
 
     <!-- Footer part -->
 
     <footer>
-        <div>Secure payment
-            Don't worry, your money is in secure places.
+        
+        <div><img src="./account_balance_wallet.svg" alt="">
+            <span class="cap">Secure payment</span>
+            <div class="con">Don't worry, your money is in secure places</div>
+            
         </div>
-        <div>Fast & free delivery
-            Home delivery $15 For free delivery order over $250
+
+        <div><img src="./local_shipping.svg" alt="">
+           <span class="cap">Fast & free delivery</span>
+           <div class="con">Home delivery $15 For free delivery order over $250</div>
+            
         </div>
-        <div>Return policy
-            No hassle return policy
+        
+        <div><img src="./inventory.svg" alt="">
+            <span class="cap">Return policy</span>
+            <div class="con">No hassle return policy</div>
+            
         </div>
+    
     </footer>
+
 </body>
 
 <script>
@@ -119,6 +152,6 @@
       dots[slideIndex-1].className += " active";
       captionText.innerHTML = dots[slideIndex-1].alt;
     }
-    </script>
+</script>
 
 </html>
